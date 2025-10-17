@@ -1,0 +1,114 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffe5ec, #fce8f6, #e7f5ff);
+  color: #333;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation Bar */
+nav {
+  background: #ffc2d1;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 20px 20px;
+  animation: slideDown 1.2s ease;
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Nav Buttons - Pastel Palette */
+nav a {
+  text-decoration: none;
+  color: white;
+  background: #ff8fab;   /* default pastel pink */
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Assign different pastel shades to each button */
+nav a:nth-child(1) { background: #ff8fab; } /* Home - pastel pink */
+nav a:nth-child(2) { background: #b5ead7; } /* Memory Lane - pastel mint */
+nav a:nth-child(3) { background: #c7ceea; } /* Words - pastel purple */
+nav a:nth-child(4) { background: #ffdac1; } /* Song - pastel peach */
+nav a:nth-child(5) { background: #ffb7b2; } /* Cake Game - pastel coral */
+
+/* Hover effect */
+nav a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  filter: brightness(1.1);
+}
+
+/* Header Section */
+header {
+  padding: 40px 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.8em;
+  color: #d6336c;
+  animation: bounceIn 1.5s ease;
+}
+
+/* Bounce animation */
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+header p {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Main Card */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 2s ease;
+}
+.welcome-note {
+  font-size: 1.2em;
+  color: #d6336c;
+  margin-bottom: 20px;
+}
+
+
+/* Floating effect on hover */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  color: #ff6f91;
+}

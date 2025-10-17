@@ -1,0 +1,82 @@
+/* General Page Styling */
+body { 
+  background: linear-gradient(135deg, #ffe5ec, #fce8f6, #e7f5ff); 
+  text-align: center; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation Bar */
+nav {
+  background: #ffc2d1;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 20px 20px;
+}
+
+/* Nav Buttons */
+nav a {
+  text-decoration: none;
+  color: white;
+  background: #ff8fab;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Different pastel colors for each button */
+nav a:nth-child(1) { background: #ff8fab; } /* Home */
+nav a:nth-child(2) { background: #b5ead7; } /* Memory Lane */
+nav a:nth-child(3) { background: #c7ceea; } /* Words */
+nav a:nth-child(4) { background: #ffdac1; } /* Song */
+nav a:nth-child(5) { background: #ffb7b2; } /* Cake */
+
+/* Hover effect */
+nav a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  filter: brightness(1.1);
+}
+
+/* Title */
+h1 { 
+  color: #d6336c; 
+  font-size: 2.2em;
+  margin: 30px 0;
+  animation: dreamyFade 2s ease-in-out;
+}
+
+/* QR Section */
+.qr img {
+  margin-top: 30px;
+  width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border: 3px solid #ffc2d1;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Dreamy floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Soft fade for titles */
+@keyframes dreamyFade {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}

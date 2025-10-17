@@ -1,0 +1,134 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffe5ec, #fce8f6, #e7f5ff);
+  color: #333;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation Bar */
+nav {
+  background: #ffc2d1;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 20px 20px;
+}
+
+/* Nav Buttons */
+nav a {
+  text-decoration: none;
+  color: white;
+  background: #ff8fab;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Different pastel colors for each button */
+nav a:nth-child(1) { background: #ff8fab; } /* Home */
+nav a:nth-child(2) { background: #b5ead7; } /* Memory Lane */
+nav a:nth-child(3) { background: #c7ceea; } /* Words */
+nav a:nth-child(4) { background: #ffdac1; } /* Song */
+nav a:nth-child(5) { background: #ffb7b2; } /* Cake */
+
+/* Hover effect */
+nav a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  filter: brightness(1.1);
+}
+
+/* Title */
+h1 {
+  margin: 30px 0;
+  font-size: 2.2em;
+  color: #d6336c;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 30px 20px 60px;
+  max-width: 1200px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* Each image container */
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff0f6;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 280px;
+}
+
+/* Hover animation for the whole card */
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Gallery Images */
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  display: block;
+}
+
+/* Description Box */
+.caption {
+  background: #ffe6eb;
+  color: #d6336c;
+  font-size: 0.95em;
+  padding: 10px;
+  border-radius: 0 0 20px 20px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  transition: background 0.3s ease;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional subtle hover color for caption */
+.gallery-item:hover .caption {
+  background: #ffd6e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  nav a {
+    padding: 8px 15px;
+  }
+  .gallery {
+    gap: 20px;
+  }
+}

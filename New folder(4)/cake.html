@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Birthday Cake</title>
+  <link rel="stylesheet" href="cake.css">
+</head>
+<body>
+  <!-- Menu Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="memory-lane.html">Memory Lane</a>
+    <a href="words.html">Words from Me</a>
+    <a href="song.html">Our Song</a>
+    <a href="cake.html">Cake Game 🎂</a>
+  </nav>
+
+  <h1>🎂 Build Your Birthday Cake 🎂</h1>
+  <p>Choose your cake bases in order and decorate with toppings 💖</p>
+
+  <div class="cake-container">
+    <div id="tier1" class="cake-tier hidden"></div>
+    <div id="tier2" class="cake-tier hidden"></div>
+    <div id="tier3" class="cake-tier hidden"></div>
+    <div id="toppings"></div>
+  </div>
+
+  <div class="controls">
+    <h2>Choose Cake Base</h2>
+    <button onclick="addBase('strawberry')">Strawberry 🍓</button>
+    <button onclick="addBase('chocolate')">Chocolate 🍫</button>
+    <button onclick="addBase('vanilla')">Vanilla 🍰</button>
+
+    <h2>Add Toppings</h2>
+    <button onclick="addTopping('candle')">Candle 🕯</button>
+    <button onclick="addTopping('heart')">Hearts ❤</button>
+    <button onclick="addTopping('cherry')">Cherries 🍒</button>
+    <button onclick="addTopping('sprinkle')">Sprinkles ✨</button>
+  </div>
+
+  <script src="cake.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffe5ec, #fce8f6, #e7f5ff);
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Menu Bar */
+nav {
+  background: #ffc2d1;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+nav a:nth-child(1) { background: #ff8fab; }
+nav a:nth-child(2) { background: #b5ead7; }
+nav a:nth-child(3) { background: #c7ceea; }
+nav a:nth-child(4) { background: #ffdac1; }
+nav a:nth-child(5) { background: #ffb7b2; }
+
+nav a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Title */
+h1 {
+  color: #d6336c;
+  font-size: 2.2em;
+  margin: 30px 0 10px;
+}
+
+p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Cake Container */
+.cake-container {
+  position: relative;
+  width: 220px;
+  margin: 40px auto;
+  height: 350px;
+}
+
+/* Cake Base - Tiers */
+.cake-tier {
+  width: 220px;
+  border-radius: 50% / 20%;
+  position: absolute;
+  left: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+#tier1 { height: 100px; bottom: 0; }
+#tier2 { height: 80px; bottom: 100px; left: 20px; width: 180px; }
+#tier3 { height: 60px; bottom: 180px; left: 40px; width: 140px; }
+
+/* Cake Base Pastels */
+.chocolate { background: #a97155; }
+.vanilla { background: #f8e5b0; }
+.strawberry { background: #ffb3c1; }
+
+/* Hidden class */
+.hidden { display: none; }
+
+/* Toppings */
+#toppings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 350px;
+  pointer-events: none;
+}
+
+.topping {
+  font-size: 28px;
+  position: absolute;
+  animation: bounce 0.6s ease;
+}
+
+/* Controls Buttons */
+.controls button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Pastel button colors */
+.controls button:nth-child(2n) { background: #ff8fab; }
+.controls button:nth-child(2n+1) { background: #b5ead7; }
+
+/* Bounce Animation for toppings */
+@keyframes bounce {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

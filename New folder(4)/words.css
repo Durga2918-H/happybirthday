@@ -1,0 +1,105 @@
+/* General Page Styling */
+body { 
+  background: linear-gradient(135deg, #ffe5ec, #fce8f6, #e7f5ff); 
+  text-align: center; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation Bar */
+nav {
+  background: #ffc2d1;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 20px 20px;
+}
+
+/* Nav Buttons */
+nav a {
+  text-decoration: none;
+  color: white;
+  background: #ff8fab;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Different pastel colors for each button */
+nav a:nth-child(1) { background: #ff8fab; } /* Home */
+nav a:nth-child(2) { background: #b5ead7; } /* Memory Lane */
+nav a:nth-child(3) { background: #c7ceea; } /* Words */
+nav a:nth-child(4) { background: #ffdac1; } /* Song */
+nav a:nth-child(5) { background: #ffb7b2; } /* Cake */
+
+/* Hover effect */
+nav a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  filter: brightness(1.1);
+}
+
+/* Title */
+h1 { 
+  color: #d6336c; 
+  font-size: 2.2em;
+  margin: 30px 0;
+  animation: popIn 1.2s ease;
+}
+
+/* Letter Box */
+.letter {
+  background: linear-gradient(145deg, #fff0f6, #ffe5ec);
+  margin: 20px auto;
+  padding: 35px;
+  max-width: 500px;
+  border-radius: 25px;
+  font-size: 18px;
+  line-height: 1.7;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border: 2px dashed #ffb3c6;
+  position: relative;
+  animation: floatUp 1.8s ease;
+}
+
+/* Cute pastel heart at the top corner */
+.letter::before {
+  content: "💌";
+  font-size: 28px;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  animation: bounce 2s infinite;
+}
+
+/* Animations */
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
